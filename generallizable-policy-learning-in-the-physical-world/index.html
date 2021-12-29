@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>GPLPW2021</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="nav">
+            <div class="nav-container">
+                <a href="index.html#">Home</a>
+                <a href="index.html#intro">Introduction</a>
+                <a href="index.html#challenge">Challenge</a>
+                <a href="index.html#schedule">Schedule</a>
+                <a href="index.html#speakers">Speakers</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="title-container">
+            <div style="text-align: center;">
+                <div class="subtitle"></div>
+                <h1>Generalizable Policy Learning in the Physical World</h1>
+                <div class="subtitle" style="color: #ccc; margin: 20px">
+                  ICLR 2022 Workshop
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="intro">
+                <h2>Introduction</h2>
+
+                <p>
+                  Generalization is particularly important when <b>learning policies to interact with the physical world</b>. The spectrum of such policies is broad: the policies can be high-level, such as action plans that concern temporal dependencies and causalities of environment states; or low-level, such as object manipulation skills to transform objects that are rigid, articulated, soft, or even fluid.
+                </p>
+
+                <p>
+                  In the physical world, an embodied agent can face a number of changing factors such as <b>physical parameters, action spaces, tasks, visual appearances of the scenes, geometry and topology of the objects</b>, etc. And many important real-world tasks involving generalizable policy learning, e.g., visual navigation, object manipulation, and autonomous driving. Therefore, learning generalizable policies is crucial to developing intelligent embodied agents in the real world. 
+                </p>
+
+                <p>
+                  Though important, the field is very much under-explored in a systematic way. While the study of generalization has played an essential role in many application domains of machine learning (e.g., image recognition and natural language processing), it did not receive the same amount of attention in common frameworks of policy learning (e.g., reinforcement learning and imitation learning) at the early stage for reasons such as policy optimization is difficult and benchmark datasets are not quite ready yet. 
+                </p>
+
+                <p>
+                  Learning generalizable policies in the physical world requires deep synergistic efforts across fields of vision, learning, and robotics, and poses many interesting research problems. <b>Recently, this field has started to attract much attention across disciplines</b>, with the maturity of policy optimization algorithms and emergence of training environments with diverse assets. 
+                  For example, to achieve task-level generalization, meta-RL optimizes fast adaptation in unseen environments; to generalize past experience to new scenarios, offline RL learns an initial policy using previously collected trajectories, and the initial policy may be refined by an online RL process; to improve generalization over visual appearance, domain randomization and data augmentation techniques that were originally developed in computer vision are also applied in visual reinforcement/imitation learning. In addition, in this past year, we are witnessing new physical simulation environments with diverse assets for training and testing generalizabile policy learning algorithms.
+                  Given the importance of this topic and the increasing attention attracted by it, we firmly believe that it is good timing to start the discussion of generalizable policy learning in ICLR, which is a pioneering conference which leads the trends of machine learning, especially applied machine learning research.
+                </p>
+
+                <!-- <p>
+                  This workshop is designed to foster progress in generalizable policy learning, in particular, with a focus on the tasks in the physical world, such as visual navigation, object manipulation, and autonomous driving, because these real-world tasks require complex reasoning involving visual appearance, geometry, and physics. Technically, we expect to stimulate improvement in new directions such as:
+                  \begin{itemize}
+                      \item Emergence of physical concepts driven by interaction
+                      \item Physical concept-based policy making
+                      \item 3D learning for policy learning 
+                      \item Differentiable physics coupled with policy learning
+                  \end{itemize}
+                </p>
+
+                <p>
+                  We will also encourage discussions and contributions around more general topics such as: 
+                  \begin{itemize}
+                      \item Learning methods for embodied AI tasks (e.g., manipulation, navigation);
+                      \item Real-world or simulated benchmarks for generalizable policy learning;
+                      \item Learning representations for generalization in physical world tasks;
+                      \item Large-scale reinforcement/imitation learning;
+                      \item Multi-task learning;
+                      \item Data augmentation techniques for generalizable policy learning;
+                      \item Few-shot imitation learning;
+                      \item Affordance prediction; 
+                      \item Other topics about generalizable policy learning in the physical world
+                  \end{itemize}
+                </p> -->
+
+                <p>
+                  Our main targeted participants are researchers interested in applying learning methods to develop intelligent embodied agents in the physical world. More specially, target communities include, but are not limited to: robotics, reinforcement learning, learning from demonstrations, offline reinforcement learning, meta-learning, multi-task learning, 3D vision, computer vision, computer graphics, and physical simulation.
+                </p>
+
+                <p>
+                  In affiliation to this workshop, we are also organizing the \emph{SAPIEN Manipulation Skill Challenge}, which focuses on learning to manipulate unseen objects with 3D visual inputs. We will announce winners and host winner presentations in this workshop.
+                </p>
+
+            </div>
+
+            <div class="section" id="challenge">
+                <h2>Challenge</h2>
+                (details coming soon)
+                <!-- <h3>Timeline</h3>
+                <table style="width: 100%">
+                    <tr><td>June 18</td><td>Challenge Release</td></tr>
+                    <tr><td>July 01</td><td>Submission Open</td></tr>
+                </table> -->
+            </div>
+
+            <div class="section" id="schedule">
+                <h2>Workshop Schedule</h2>
+                (coming soon)
+                <!-- <table style="width: 100%">
+                     <tr> <th>Start</th> <th>End</th> <th>Event</th> </tr>
+                     <tr><td>8:50am</td><td>9:00am</td><td>Opening Remark</td></tr>
+                     <tr><td>9:00am</td><td>9:30am</td><td>Keynote speaker</td></tr>
+                     <tr><td>9:30am</td><td>10:00am</td><td>Keynote speaker</td></tr>
+                     <tr><td>10:00am</td><td>10:40am</td>
+                     <td>Spottrght Section: Simulation Environments for Embodied AI</td></tr>
+                     <tr><td>10:40am</td><td>11:10am</td><td>Keynote speaker</td></tr>
+                     <tr><td>11:10am</td><td>11:40am</td><td>Keynote speaker</td></tr>
+                     <tr><td>11:40am</td><td>12:10pm</td><td>Keynote speaker</td></tr>
+                     <tr><td>12:10pm</td><td>1:30pm</td><td>Lunch</td></tr>
+                     <tr><td>1:30pm</td><td>2:00pm</td><td>Keynote speaker</td></tr>
+                     <tr><td>2:00pm</td><td>2:30pm</td><td>Keynote speaker</td></tr>
+                     <tr><td>2:30pm</td><td>3:00pm</td><td>Keynote speaker</td></tr>
+                     <tr><td>3:00pm</td><td>3:40pm</td><td>Accepted Paper Spottrght Presentation</td></tr>
+                     <tr><td>3:40pm</td><td>4:10pm</td><td>Keynote speaker</td></tr>
+                     <tr><td>4:10pm</td><td>4:40pm</td><td>Keynote speaker</td></tr>
+                     <tr><td>4:40pm</td><td>5:10pm</td><td>Panel Discussion and Community Building</td></tr>
+                     </table> -->
+                <ul>
+                </ul>
+            </div>
+
+            <div class="section" id="speakers">
+                <h2>Invited Speakers</h2>
+                (coming soon)
+                <div class="people">
+                </div>
+            </div>
+
+            <div class="section" id="organizers">
+              <h2>Organizers</h2>
+              <p> listed alphabetically </p>
+              <div class="people">
+                <a href="https://3d.snu.ac.kr/members/">
+                  <img src="../assets/youngmin_kim.jpeg">
+                  <div>Young Min Kim</div>
+                  <div class="aff">Seoul National University</div>
+                </a>
+                <a href="https://www.cs.umd.edu/~lin/">
+                  <img src="../assets/Ming_Lin_UMIACS.jpg">
+                  <div>Ming C. Lin</div>
+                  <div class="aff">University of Maryland College Park</div>
+                </a>
+                <a href="https://people.eecs.berkeley.edu/~svlevine/">
+                  <img src="../assets/sl.png">
+                  <div>Sergey Levine</div>
+                  <div class="aff">UC Berkeley</div>
+                </a>
+                <a href="http://cseweb.ucsd.edu/~t3mu/">
+                  <img src="../assets/tongzhoumu.jpg">
+                  <div>Tongzhou Mu</div>
+                  <div class="aff">UC San Diego</div>
+                </a>
+                <a href="https://ashvin.me/">
+                  <img src="../assets/ashvin.jpg">
+                  <div>Ashvin Nair</div>
+                  <div class="aff">UC Berkeley</div>
+                </a>
+                <a href="https://cseweb.ucsd.edu/~haosu/">
+                  <img src="../assets/haosu.jpeg">
+                  <div>Hao Su</div>
+                  <div class="aff">UC San Diego</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="section" id="contact">
+                <h2>Contact</h2>
+                <div>For any questions, you may contact Tongzhou Mu at <a href="mailto:t3mu@eng.ucsd.edu">t3mu@eng.ucsd.edu</a>.</div>
+            </div>
+
+        </div>
+        <div class="foot">
+          © 2022 Generalizable Policy Learning in the Physical World
+        </div>
+    </body>
+</html>
