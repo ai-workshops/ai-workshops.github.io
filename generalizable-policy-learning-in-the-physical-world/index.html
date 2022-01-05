@@ -17,6 +17,7 @@
             <div class="nav-container">
                 <a href="index.html#">Home</a>
                 <a href="index.html#intro">Introduction</a>
+                <a href="index.html#call">Call for Papers</a>
                 <a href="index.html#challenge">Challenge</a>
                 <a href="index.html#schedule">Schedule</a>
                 <a href="index.html#speakers">Speakers</a>
@@ -29,7 +30,7 @@
                 <div class="subtitle"></div>
                 <h1>Generalizable Policy Learning in the Physical World</h1>
                 <div class="subtitle" style="color: #ccc; margin: 20px">
-                  ICLR 2022 Workshop
+                  April 29, ICLR 2022 Workshop (Virtual)
                 </div>
             </div>
         </div>
@@ -40,65 +41,122 @@
 
                 <p>
                   Generalization is particularly important when <b>learning policies to interact with the physical world</b>. The spectrum of such policies is broad: the policies can be high-level, such as action plans that concern temporal dependencies and causalities of environment states; or low-level, such as object manipulation skills to transform objects that are rigid, articulated, soft, or even fluid.
-                </p>
-
-                <p>
                   In the physical world, an embodied agent can face a number of changing factors such as <b>physical parameters, action spaces, tasks, visual appearances of the scenes, geometry and topology of the objects</b>, etc. And many important real-world tasks involving generalizable policy learning, e.g., visual navigation, object manipulation, and autonomous driving. Therefore, learning generalizable policies is crucial to developing intelligent embodied agents in the real world. 
                 </p>
 
-                <p>
+                <!-- <p>
                   Though important, the field is very much under-explored in a systematic way. While the study of generalization has played an essential role in many application domains of machine learning (e.g., image recognition and natural language processing), it did not receive the same amount of attention in common frameworks of policy learning (e.g., reinforcement learning and imitation learning) at the early stage for reasons such as policy optimization is difficult and benchmark datasets are not quite ready yet. 
-                </p>
-
-                <p>
-                  Learning generalizable policies in the physical world requires deep synergistic efforts across fields of vision, learning, and robotics, and poses many interesting research problems. <b>Recently, this field has started to attract much attention across disciplines</b>, with the maturity of policy optimization algorithms and emergence of training environments with diverse assets. 
-                  For example, to achieve task-level generalization, meta-RL optimizes fast adaptation in unseen environments; to generalize past experience to new scenarios, offline RL learns an initial policy using previously collected trajectories, and the initial policy may be refined by an online RL process; to improve generalization over visual appearance, domain randomization and data augmentation techniques that were originally developed in computer vision are also applied in visual reinforcement/imitation learning. In addition, in this past year, we are witnessing new physical simulation environments with diverse assets for training and testing generalizabile policy learning algorithms.
-                  Given the importance of this topic and the increasing attention attracted by it, we firmly believe that it is good timing to start the discussion of generalizable policy learning in ICLR, which is a pioneering conference which leads the trends of machine learning, especially applied machine learning research.
-                </p>
+                </p> -->
 
                 <!-- <p>
-                  This workshop is designed to foster progress in generalizable policy learning, in particular, with a focus on the tasks in the physical world, such as visual navigation, object manipulation, and autonomous driving, because these real-world tasks require complex reasoning involving visual appearance, geometry, and physics. Technically, we expect to stimulate improvement in new directions such as:
-                  \begin{itemize}
-                      \item Emergence of physical concepts driven by interaction
-                      \item Physical concept-based policy making
-                      \item 3D learning for policy learning 
-                      \item Differentiable physics coupled with policy learning
-                  \end{itemize}
-                </p>
-
-                <p>
-                  We will also encourage discussions and contributions around more general topics such as: 
-                  \begin{itemize}
-                      \item Learning methods for embodied AI tasks (e.g., manipulation, navigation);
-                      \item Real-world or simulated benchmarks for generalizable policy learning;
-                      \item Learning representations for generalization in physical world tasks;
-                      \item Large-scale reinforcement/imitation learning;
-                      \item Multi-task learning;
-                      \item Data augmentation techniques for generalizable policy learning;
-                      \item Few-shot imitation learning;
-                      \item Affordance prediction; 
-                      \item Other topics about generalizable policy learning in the physical world
-                  \end{itemize}
+                  Learning generalizable policies in the physical world requires deep synergistic efforts across fields of <b>vision, learning, and robotics</b>, and poses many interesting research problems. <b>Recently, this field has started to attract much attention across disciplines</b>, with the maturity of policy optimization algorithms and emergence of training environments with diverse assets. 
+                  For example, to achieve task-level generalization, meta-RL optimizes fast adaptation in unseen environments; to generalize past experience to new scenarios, offline RL learns an initial policy using previously collected trajectories, and the initial policy may be refined by an online RL process; to improve generalization over visual appearance, domain randomization and data augmentation techniques that were originally developed in computer vision are also applied in visual reinforcement/imitation learning. 
+                  In addition, in this past year, we are witnessing new physical simulation environments with diverse assets for training and testing generalizabile policy learning algorithms.
+                  Given the importance of this topic and the increasing attention attracted by it, we firmly believe that it is good timing to start the discussion of generalizable policy learning in ICLR, which is a pioneering conference which leads the trends of machine learning, especially applied machine learning research.
                 </p> -->
 
                 <p>
-                  Our main targeted participants are researchers interested in applying learning methods to develop intelligent embodied agents in the physical world. More specially, target communities include, but are not limited to: robotics, reinforcement learning, learning from demonstrations, offline reinforcement learning, meta-learning, multi-task learning, 3D vision, computer vision, computer graphics, and physical simulation.
+                  Learning generalizable policies in the physical world requires deep synergistic efforts across fields of <b>vision, learning, and robotics</b>, and poses many interesting research problems.
+                  This workshop is designed to foster progress in generalizable policy learning, in particular, with <b>a focus on the tasks in the physical world</b>, such as visual navigation, object manipulation, and autonomous driving, because these real-world tasks require complex reasoning involving visual appearance, geometry, and physics. Technically, we expect to stimulate improvement in new directions such as:
+                  <ul>
+                    <li>Emergence of physical concepts driven by interaction</li>
+                    <li>Physical concept-based policy making</li>
+                    <li>3D learning for policy learning </li>
+                    <li>Differentiable physics coupled with policy learning</li>
+                    <li>...</li>
+                  </ul>
+                </p>
+
+
+                <p>
+                  Our main targeted participants are researchers interested in <b>applying learning methods to develop intelligent embodied agents in the physical world</b>. More specially, target communities include, but are not limited to: 
+                  <i>
+                    robotics, reinforcement learning, learning from demonstrations, offline reinforcement learning, meta-learning, multi-task learning, 3D vision, computer vision, computer graphics, and physical simulation.
+                  </i>
                 </p>
 
                 <p>
-                  In affiliation to this workshop, we are also organizing the \emph{SAPIEN Manipulation Skill Challenge}, which focuses on learning to manipulate unseen objects with 3D visual inputs. We will announce winners and host winner presentations in this workshop.
+                  In affiliation to this workshop, we are also organizing the <a href="https://sapien.ucsd.edu/challenges/maniskill2021/">ManiSkill Challenge</a>, which focuses on learning to manipulate unseen objects in simulation with 3D visual inputs. We will announce winners and host winner presentations in this workshop.
                 </p>
 
             </div>
 
+            <div class="section" id="call">
+              <h2>Call for Papers</h2>
+              <p>
+                We invite submission to the Generalizable Policy Learning in the Physical World workshop, hosted at ICLR 2022. 
+              </p>
+              <h3>Paper topics</h3>
+              <p>
+              A non-exhaustive list of relevant topics:
+              <ul>
+                <li>Learning methods for embodied AI tasks (e.g., manipulation, navigation)</li>
+                <li>Real-world or simulated benchmarks for generalizable policy learning</li>
+                <li>Learning representations for generalization in physical world tasks</li>
+                <li>Large-scale reinforcement/imitation learning</li>
+                <li>Multi-task learning</li>
+                <li>Data augmentation techniques for generalizable policy learning</li>
+                <li>Few-shot imitation learning</li>
+                <li>Affordance prediction</li>
+                <li>Other topics about generalizable policy learning in the physical world</li>
+              </ul>
+              </p>
+              <h3>Submission Guidelines</h3>
+              <p>
+                <ul>
+                  <li><b>Submission Portal:</b> (coming soon, hosted on OpenReview)</li>
+                  <!-- <li><b>Format:</b> You must format your submission using the <a href="https://github.com/ICLR/Master-Template/raw/master/archive/iclr2022.zip"> ICLR 2022 LaTeX style file.</a> </li> -->
+                  <li><b>Paper Length:</b> The page limit is <b>4 pages</b> excluding references, acknowledgements, and appendices. Camera-ready versions may go up to five content pages.</li>
+                  <li><b>Format:</b>
+                    <ul>
+                      <li>You must format your submission using the <a href="https://github.com/ICLR/Master-Template/raw/master/archive/iclr2022.zip"> ICLR 2022 LaTeX style file.</a></li>
+                      <li>Please include the references and supplementary materials in the same PDF as the main paper. </li>
+                      <li>The maximum file size for submissions is 100MB. Submissions that violate the ICLR style (e.g., by decreasing margins or font sizes) or page limits may be rejected without further review. </li>
+                    </ul>
+                  </li>
+                  <li><b>Dual Submission:</b>
+                    <ul>
+                      <li>Papers to be submitted or in preparation for submission to other major venues (including ICML 2022) in the field are allowed.</li>
+                      <li>Howerver, we will NOT accept work published in prior conferences.</li>
+                    </ul>
+                  </li>
+                  <!-- <li>Format
+                    <ul>
+                      <li>The page limit is <b>4 pages</b> excluding references, acknowledgements, and appendices. Camera-ready versions may go up to five content pages.</li>
+                      <li>You must format your submission using the <a href="https://github.com/ICLR/Master-Template/raw/master/archive/iclr2022.zip"> ICLR 2022 LaTeX style file.</a> </li>
+                    </ul>
+                  </li> -->
+                  <li><b>Non-archival:</b> The workshop is a non-archival venue and will not have official proceedings. Workshop submissions can be subsequently or concurrently submitted to other venues.</li>
+                  <li><b>Visibility:</b> Submissions and reviews will not be public. Only accepted papers will be made public.</li>
+                  <li><b>Contact:</b> (coming soon)</li>
+                </ul>
+              </p>
+
+              <h3>Review and Selection</h3>
+              <p>
+                <ul>
+                  <li>The review process will be double-blind. As an author, you are responsible for anonymizing your submission. In particular, you should not include author names, author affiliations, or acknowledgements in your submission and you should avoid providing any other identifying information (even in the supplementary material). </li>
+                  <li>Each submission will be reviewed for originality, significance, clarity, soundness, relevance and technical contents.</li>
+                  <li>All accepted papers will be presented as posters during the workshop. </li>
+                  <li>Authors of accepted papers will record a 5-minute talk. </li>
+                  <li>At least one co-author of each accepted paper is expected to register for ICLR 2022 and attend the poster session. </li>
+                  <li>All the accepted submissions will be available on our workshop website, though authors could indicate explicitly if they want to opt out. </li>
+                </ul>
+              </p>
+       
+              <h3>Timeline (11:59 PM Pacific Standard Time)</h3>
+              <table style="width: 100%">
+                  <tr><td>Jan 10, 2022</td><td>Announcement and call for submissions</td></tr>
+                  <tr><td>Feb 25, 2022</td><td>Paper submission <b>deadline</b></td></tr>
+                  <tr><td>Mar 25, 2022</td><td>Review decisions announced</td></tr>
+                  <tr><td>Apr 15, 2022</td><td>Camera ready deadline</td></tr>
+              </table>
+          </div>
+
+
             <div class="section" id="challenge">
                 <h2>Challenge</h2>
-                (details coming soon)
-                <!-- <h3>Timeline</h3>
-                <table style="width: 100%">
-                    <tr><td>June 18</td><td>Challenge Release</td></tr>
-                    <tr><td>July 01</td><td>Submission Open</td></tr>
-                </table> -->
+                Please refer to the <a href="https://sapien.ucsd.edu/challenges/maniskill2021/">ManiSkill Challenge website</a> for details.
             </div>
 
             <div class="section" id="schedule">
@@ -129,7 +187,17 @@
 
             <div class="section" id="speakers">
                 <h2>Invited Speakers</h2>
-                (coming soon)
+                <p> listed alphabetically </p>
+                <p>
+                  <ul>
+                    <li>Nadia Figuero, Penn </li>
+                    <li>Mrinal Kalakrishnan, X</li>
+                    <li>Danica Kragic, KTH</li>
+                    <li>Shuran Song, Columbia University</li>
+                    <li>Peter Stone, UT Austin</li>
+                    <li>Xiaolong Wang, UC San Diego</li>
+                  </ul>
+                </p>
                 <div class="people">
                 </div>
             </div>
