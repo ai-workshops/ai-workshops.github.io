@@ -108,12 +108,16 @@ h3 {
 }
 
 .title-container {
-    width: calc(100% - 40px);
+    /* width: calc(100% - 40px); */
+    width: 100vw;
     min-height: 20vw;
     margin: auto;
-    padding: 40px 20px;
+    /* padding: 40px 20px; */
+    padding: 40px 0;
     color: white;
     background-image: linear-gradient(135deg,#333, black, #333);
+    background-image: url("assets/teaser.jpg");
+    /* background-image: url("assets/teaser.png"); */
     background-size: cover;
     background-position: center center;
     display: flex;
