@@ -186,3 +186,9 @@ th {
     text-align: right;
     color: white;
 }
+
+#reviewers ul {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+}
