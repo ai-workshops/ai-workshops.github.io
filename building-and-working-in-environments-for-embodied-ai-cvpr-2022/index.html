@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Building and Working in Environments for Embodied AI</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="nav">
+            <div class="nav-container">
+                <a href="index.html#">Home</a>
+                <a href="index.html#intro">Introduction</a>
+                <a href="index.html#syllabus">Syllabus</a>
+                <a href="index.html#material">Material</a>
+                <a href="index.html#schedule">Schedule</a>
+                <a href="index.html#speakers">Speakers & Organizers</a>
+                <!-- <a href="index.html#contact">Contact</a> -->
+            </div>
+        </div>
+
+        <div class="title-container">
+            <div style="text-align: center;">
+                <h1>Building and Working in Environments for Embodied AI</h1>
+                <div class="subtitle" style="color: #ccc; margin: 20px">
+                    A CVPR 2022 Tutorial, June 20
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="intro">
+                <h2>Introduction</h2>
+                <p>
+                    In recent years, there has been a growing interest of
+                    embodied AI research in computer vision. Multiple embodied
+                    AI workshops and challenges have taken place in the research
+                    community, including Generalizable Policy Learning in the
+                    Physical World in ICLR 2022, OCRTOC: Open Cloud Robot Table
+                    Organization Challenge in IROS 2020, Habitat: Embodied
+                    Agents Challenge and Workshop in CVPR 2019, and Embodied AI
+                    Workshop in CVPR 2020 and 2021. Computer vision is now an
+                    essential module in embodied AI research, but we are still
+                    missing a basic tutorial to guide researchers, especially
+                    those from vision and machine learning backgrounds, to get
+                    started in this field.
+                </p>
+                <p>
+                    In particular, many impressive progress in embodied AI has
+                    been made in virtual environments, which are powered by the
+                    latest progress in physical simulation and rendering
+                    technologies. These platforms allows for the study of many
+                    vision-robotics problems that cannot be studied at scale in
+                    the real world before. The nature of faster speed, easier
+                    parallelization, simpler data collection, and lower cost
+                    allows embodied AI study in simulation to build larger
+                    communities, with diverse researcher backgrounds, improved
+                    code sharing, and standard benchmarks. However, virtual
+                    environments do come with their own issues, such as
+                    simulation parameters and domain gaps, which are worth
+                    noting when building and using them.
+                </p>
+                <p>
+                    Our tutorial aims to provide the getting-started guide for
+                    computer vision researchers to study vision problems on
+                    embodied agents in the environments, as well as highlight
+                    common issues encountered when using these en- vironments.
+                    The tutorial will focus on the principles shared across
+                    platforms and teach concepts using multiple simulation
+                    environments.
+                </p>
+            </div>
+
+            <div class="section" id="syllabus">
+                <h2>Syllabus</h2>
+                <p>The course will cover the following units:</p>
+                <h3>
+                    The Basic Frameworks for Embodied AI
+                </h3>
+                <p>
+                    The details of how the visual system and the control
+                    and actuation system are connected together is often
+                    unclear to researchers in the vision community. Here we
+                    introduce common frameworks to compose a system with
+                    both components.
+                </p>
+                <ul>
+                    <li>Reinforcement learning: OpenAI Gym interface</li>
+                    <li>Real-world robotics: ROS architecture</li>
+                    <li>Overview of motion planning and control</li>
+                </ul>
+
+                <h3>Techniques Behind Embodied AI Environments and Sources of Domain Gaps</h3>
+                <p>
+                    hen vision researchers use embodied AI environments, they
+                    need to have an basic knowledge of how the simulator works.
+                    This allows them to understand the capabilities and the
+                    limitations of the simulation, so that they can leverage the
+                    full capabilities of these environments and ensure correct
+                    simulation. We provide a summary of the key parameters, and
+                    guidance on how to debug issues independently.
+                </p>
+                <ul>
+                    <li> Visual sensor simulation (RGB and Depth) </li>
+                    <li> A glance at rigid-body and soft-body simulation </li>
+                    <li> Simulatable 3D asset construction </li>
+                    <li> Practical guide to improve simulation stability and reduce Sim2Real domain gap </li>
+                </ul>
+
+                <h3> Design Choices in Modern Embodied AI Environments</h3>
+                <p>Building a embodied AI environment is much more than knowing the underlying
+                    simulation technologies. To study vision problems under useful setups and at proper
+                    abstraction level, we introduce the common design choices. We will also explain the choices
+                    in common embodied AI challenges so that audiences can quickly start working on them.</p>
+                <ul>
+                    <li> Overview of Design Dimensions: Embodiment (Sensor, Actuator), Task Specification, Metric</li>
+                    <li> Case Study: Habitat Challenge (based on Habitat), Rearrangement Challenge (based on AI2THOR), ManiSkill Challenge (based on SAPIEN)</li>
+                </ul>
+
+                <h3> Experiences and Practices to Debug Simulators</h3>
+                <p>Virtual environments are not perfect. Vision researchers new to them often face
+                    challenges using them correctly. Our team has rich experiences from the feedbacks of the
+                    SAPIEN (a simulator used by many and supports the ManiSkill Embodied AI Challenge)
+                    user community. We would share these experiences.</p>
+                <ul>
+                    <li> Common issues in simulators</li>
+                    <li> Causes of the issues related to simulation techniques</li>
+                    <li> Tips and tricks to tackle these issues</li>
+                </ul>
+                <h3> Embodied AI Tasks and Visual Learning Challenges </h3>
+                <p> Goal: We will introduce major tasks in embodied AI and provide perspective on some
+                    interesting and challenging vision problems offered by these tasks.</p>
+                <ul>
+                    <li> Navigation: map representation, neural SLAM</li>
+                    <li> Rearrangement: grasp pose prediction, object-hand affordance, object-object affordance, navigation- manipulation skill chaining</li>
+                    <li> Locomotion: terrain generation, gait constraints</li>
+                    <li> Deformable body manipulation: shape representation</li>
+                </ul>
+            </div>
+
+            <div class="section" id="material">
+                <h2>Material</h2>
+                <p>(coming soon)</p>
+            </div>
+
+            <div class="section" id="schedule">
+                <h2>Tentative Schedule</h2>
+                <table style="width: 100%">
+                    <tr> <th>Start</th> <th>End</th> <th>Section</th> </tr>
+                    <tr><td>13:00 </td><td> 13:45 </td><td>The Basic Frameworks and Embodied AI</td></tr>
+                    <tr><td>13:45 </td><td> 14:30 </td><td>Techniques Behind Embodied AI Environments</td></tr>
+                    <tr><td>14:30 </td><td> 15:15 </td><td>Design Choices in Embodied AI Environments</td></tr>
+                    <tr><td>15:15 </td><td> 15:30 </td><td>Break</td></tr>
+                    <tr><td>15:30 </td><td> 16:15 </td><td>Experience and Practices to Debug Simulators</td></tr>
+                    <tr><td>16:15 </td><td> 17:00 </td><td>Embodied AI Tasks and Visual Learning Challenges</td></tr>
+                </table>
+                <ul>
+                </ul>
+            </div>
+
+            <div class="section" id="speakers">
+                <h2>Organizers and Speakers</h2>
+                <p> listed alphabetically </p>
+                <div class="people">
+                    <a href="https://angelxuanchang.github.io/index.html">
+                        <img src="../assets/angel_chang.jpg">
+                        <div>Angel Xuan Chang</div>
+                        <div class="aff">Simon Fraser University</div>
+                    </a>
+
+                    <a href="https://cray695.wixsite.com/mysite">
+                        <img src="../assets/rui_chen.jpg">
+                        <div>Rui Chen</div>
+                        <div class="aff">Tsinghua University</div>
+                    </a>
+
+                    <a href="http://cseweb.ucsd.edu/~jigu/">
+                        <img src="../assets/jiayuan_gu.jpg">
+                        <div>Jiayuan Gu</div>
+                        <div class="aff">UC San Diego</div>
+                    </a>
+
+                    <a href="https://yzqin.github.io/">
+                        <img src="../assets/yuzhe_qin.jpg">
+                        <div>Yuzhe Qin</div>
+                        <div class="aff">UC San Diego</div>
+                    </a>
+
+                    <a href="https://cseweb.ucsd.edu/~haosu/">
+                        <img src="../assets/haosu.jpeg">
+                        <div>Hao Su</div>
+                        <div class="aff">UC San Diego</div>
+                    </a>
+
+                    <a href="https://xiaolonw.github.io/">
+                        <img src="../assets/xiaolong_wang.jpg">
+                        <div>Xiaolong Wang</div>
+                        <div class="aff">UC San Diego</div>
+                    </a>
+
+                    <a href="https://www.fbxiang.com">
+                        <img src="../assets/fanbo_xiang.jpg">
+                        <div>Fanbo Xiang</div>
+                        <div class="aff">UC San Diego</div>
+                    </a>
+
+                </div>
+                <div class="people">
+                </div>
+            </div>
+
+            <!--
+                 <div class="section" id="contact">
+                 <h2>Contact</h2>
+                 <div>For any questions, you may contact us at <a href="mailto:"></a></div>
+                 </div> -->
+
+        </div>
+        <div class="foot">
+            © 2022 Building and Working in Environments for Embodied AI
+        </div>
+    </body>
+</html>
