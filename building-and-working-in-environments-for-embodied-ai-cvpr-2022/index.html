@@ -75,36 +75,47 @@
                 <h2>Syllabus</h2>
                 <p>The course will cover the following units:</p>
                 <h3>
-                    The Basic Frameworks for Embodied AI
+                    Overview of Embodied AI
                 </h3>
                 <p>
-                    The details of how the visual system and the control
-                    and actuation system are connected together is often
-                    unclear to researchers in the vision community. Here we
-                    introduce common frameworks to compose a system with
-                    both components.
+                    Embodied AI involves a wide range of topics. Here we provide
+                    a broad overview of the embodied AI field, including the
+                    following components.
+                </p>
+                <ul>
+                    <li>Simulators and environments</li>
+                    <li>Robots and controllers</li>
+                    <li>Datasets and assets</li>
+                    <li>Tasks and approaches</li>
+                    <li>Challenges</li>
+                </ul>
+                <h3>
+                    The Basic Frameworks and techniques for Embodied AI
+                </h3>
+                <p>
+                    The details of how the visual system and the control and
+                    actuation system are connected together is often unclear to
+                    researchers in the vision community. Here we introduce
+                    common frameworks to compose a system with both components.
                 </p>
                 <ul>
                     <li>Reinforcement learning: OpenAI Gym interface</li>
-                    <li>Real-world robotics: ROS architecture</li>
                     <li>Overview of motion planning and control</li>
                 </ul>
-
-                <h3>Techniques Behind Embodied AI Environments and Sources of Domain Gaps</h3>
                 <p>
                     When vision researchers use embodied AI environments, they
-                    need to have an basic knowledge of how the simulator works.
-                    This allows them to understand the capabilities and the
-                    limitations of the simulation, so that they can leverage the
-                    full capabilities of these environments and ensure correct
-                    simulation. We provide a summary of the key parameters, and
-                    guidance on how to debug issues independently.
+                    also need to have an basic knowledge of how the simulator
+                    works. This allows them to understand the capabilities and
+                    the limitations of the simulation, so that they can leverage
+                    the full capabilities of these environments and ensure
+                    correct simulation. We provide a summary of the key
+                    parameters, and guidance on how to debug issues
+                    independently.
                 </p>
                 <ul>
+                    <li> A glance at rigid-body simulation </li>
                     <li> Visual sensor simulation (RGB and Depth) </li>
-                    <li> A glance at rigid-body and soft-body simulation </li>
-                    <li> Simulatable 3D asset construction </li>
-                    <li> Practical guide to improve simulation stability and reduce Sim2Real domain gap </li>
+                    <li> Simulatable 3D asset representation and construction </li>
                 </ul>
 
                 <h3> Design Choices in Modern Embodied AI Environments</h3>
@@ -127,15 +138,34 @@
                     <li> Causes of the issues related to simulation techniques</li>
                     <li> Tips and tricks to tackle these issues</li>
                 </ul>
-                <h3> Embodied AI Tasks and Visual Learning Challenges </h3>
-                <p> Goal: We will introduce major tasks in embodied AI and provide perspective on some
-                    interesting and challenging vision problems offered by these tasks.</p>
+
+                <h3>Real World Robotics and Sim2Real</h3>
+                <p>
+                    Sim2Real is a very common question asked by users of
+                    simulation environments. In this section, we demonstrate how
+                    sim2real domain gaps arise in vision and robot control
+                    through case studies, and share our experience on deploying
+                    policies trained on simulators to the real world.
+                </p>
+
+                <h3> Embodied AI Tasks in ManiSkill and Visual Learning Challenges </h3>
+                <p>Goal: we will summarize our findings through hosting the
+                ManiSkill challenge, including</p>
                 <ul>
-                    <li> Navigation: map representation, neural SLAM</li>
-                    <li> Rearrangement: grasp pose prediction, object-hand affordance, object-object affordance, navigation- manipulation skill chaining</li>
-                    <li> Locomotion: terrain generation, gait constraints</li>
-                    <li> Deformable body manipulation: shape representation</li>
+                    <li>A comparison of imitation learning, reinforcement learning, and classic robotics</li>
+                    <li>A summary of performance by tasks and their key challenges</li>
+                    <li>Analysis on generalization performance</li>
                 </ul>
+
+                <!-- <p> Goal: We will introduce major tasks in embodied AI and provide perspective on some
+                     interesting and challenging vision problems offered by these tasks.</p>
+                     <ul>
+                     <li> Navigation: map representation, neural SLAM</li>
+                     <li> Rearrangement: grasp pose prediction, object-hand affordance, object-object affordance, navigation- manipulation skill chaining</li>
+                     <li> Locomotion: terrain generation, gait constraints</li>
+                     <li> Deformable body manipulation: shape representation</li>
+                     </ul> -->
+
             </div>
 
             <div class="section" id="material">
@@ -144,15 +174,16 @@
             </div>
 
             <div class="section" id="schedule">
-                <h2>Tentative Schedule</h2>
+                <h2>Schedule</h2>
                 <table style="width: 100%">
                     <tr> <th>Start</th> <th>End</th> <th>Section</th> </tr>
-                    <tr><td>13:00 </td><td> 13:45 </td><td>The Basic Frameworks and Embodied AI</td></tr>
-                    <tr><td>13:45 </td><td> 14:30 </td><td>Techniques Behind Embodied AI Environments</td></tr>
+                    <tr><td>13:00 </td><td> 13:45 </td><td>Overview of Embodied AI</td></tr>
+                    <tr><td>13:45 </td><td> 14:30 </td><td>The Basic Frameworks and techniques for Embodied AI</td></tr>
                     <tr><td>14:30 </td><td> 15:15 </td><td>Design Choices in Embodied AI Environments</td></tr>
                     <tr><td>15:15 </td><td> 15:30 </td><td>Break</td></tr>
                     <tr><td>15:30 </td><td> 16:15 </td><td>Experience and Practices to Debug Simulators</td></tr>
-                    <tr><td>16:15 </td><td> 17:00 </td><td>Embodied AI Tasks and Visual Learning Challenges</td></tr>
+                    <tr><td>16:15 </td><td> 16:35 </td><td>Real World Robotics and Sim2Real</td></tr>
+                    <tr><td>16:35 </td><td> 17:00 </td><td>Embodied AI Tasks in ManiSkill and Visual Learning Challenges</td></tr>
                 </table>
                 <ul>
                 </ul>
