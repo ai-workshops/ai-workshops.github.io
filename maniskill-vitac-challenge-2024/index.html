@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>RSS-GMPL2023</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="nav">
+            <div class="nav-container">
+                <a href="index.html#">Home</a>
+                <a href="index.html#intro">Introduction</a>
+                <a href="index.html#format">Challenge Format</a>
+                <a href="index.html#tasks">Tasks</a>
+                <a href="index.html#metrics">Metrics</a>
+                <a href="index.html#schedule">Schedule</a>
+                <a href="index.html#organizers">Organizers</a>
+            </div>
+        </div>
+
+        <div class="title-container">
+            <div style="text-align: center; margin: 20px">
+                <h1>ManiSkill-ViTac: Vision-based-Tactile Manipulation Skill Learning Challenge 2024</h1>
+                <!-- <div class="subtitle" style="color: #ccc; margin: 20px">
+                  <a href="https://roboticsconference.org/">RSS 2023</a> Workshop
+                </div>
+                <div class="subtitle" style="color: #ccc; margin: 20px">
+                  July 10, 2023   
+                </div>
+                <div class="subtitle" style="color: #ccc; margin: 20px">Daegu, Republic of Korea</div> -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="intro">
+                <h2>Introduction</h2>
+
+                <p>
+                  <b>Vision-based tactile sensing</b> has witnessed great progress in recent years. It can provide contact information which is important for manipulation skill learning. However, many research labs, particularly those lacking hardware expertise, face challenges in building physical experimental platforms and concentrating their research efforts on manipulation skill learning.
+                </p>
+                <p>
+                  The <b>ManiSkill-ViTac Challenge</b> aims to provide a standardized benchmarking platform for evaluating the performance of vision-based-tactile manipulation skill learning in real-world robot applications. This challenge focuses specifically on assessing skill learning. Therefore, to enable fair comparison between approaches, the challenge uses a unified tactile sensor type and simulator across all participants. 
+                </p>
+
+                <p>
+                  To the best of our knowledge, it is the first open challenge in this field. We hope it can bring together world-wide researchers from tactile sensing and policy learning and help nurture the development of advanced manipulation skill learning frameworks based on tactile sensing. 
+                </p>
+
+                <p>
+                  The ManiSkill-ViTac Challenge features:
+                  <ul>
+                    <li>An open-source general-purpose tactile sensor physics simulator</li>
+                    <li>Real-world robot evaluation</li>
+                    <li>Two high-precision manipulation tasks that closely resemble real-world applications</li>
+                  </ul>
+                </p>
+
+            </div>
+
+            <div class="section" id="format">
+              <h2>Challenge Format</h2>
+              <p>
+                The challenge is in two phases: Phase 1 Simulation, Phase 2 Real-world
+              </p>
+              <h3>Phase 1</h3>
+              <p>
+              The simulation environments are built based on our developed tactile sensor simulator. The simulator uses FEM (Finite Element Method) for physics simulation and IPC (Incremental Potential Contact) as the contact model. Below is the demonstration of our simulator for the peg-in-hole task. We have verified the zero-shot Sim2Real performance of the simulator.
+              </p>
+              <div style="text-align: center;">
+              <img src="sim_real_align.gif" alt=""  width="569" height="320">
+              </div>
+              <h3>Phase 2</h3>
+              <p>
+              The top N participants’ algorithms will be evaluated on a physical robot. We use GelSight Mini, a commercially available vision-based tactile sensor, in our challenge.
+              In order to make the system easy to use and guarantee fair comparison, the codes uploaded by the participants will run in a docker container. The input and output of the real environment will be the same as the simulation. 
+              <div style="text-align: center;">
+                <img src="image5.png" alt=""  height="320">
+                </div>
+              </p>
+              <p>
+              Each team will have three chances to upload the codes and evaluate. Full evaluation logs, including raw observations, groundtruth states, will be given to the participants, such that they can fine-tune their algorithms.
+              </p>
+            </div>
+            <div class="section" id="tasks">
+              <h2>Tasks</h2>
+              <p>
+                The challenge includes two tasks: plug insertion and lock opening. Similar to the  <a href="https://sapien.ucsd.edu/challenges/maniskill/">ManiSkill challenge</a>, we focus on evaluating the policy’s generalizability. Each task includes multiple objects of different shapes (e.g., the plug can be a cylinder or have two pins, and keys can have two or three teeth), which are unknown during evaluation. Therefore, the policy needs to be able to generalize to different plugs and keys.
+              </p>
+              <div style="text-align: center;">
+                <img src="image4.gif" alt="Plug insertion"  height="200">
+                <figcaption>Plug insertion</figcaption>
+                <img src="image3.gif" alt="Lock opening"  height="200">
+                <figcaption>Lock opening</figcaption>
+              </div>
+            </div>
+
+            <div class="section" id="metrics">
+              <h2>Metrics</h2>
+              <p>
+                Participating entries will be evaluated on K initial states. Each state will repeat T times. An episode is successful if the plug reaches the bottom of the socket and the lock is turned for a certain angle. For the real-world robot, a torque sensor is used. If at any point the torque on the gripper is larger than threshold, the task fails immediately. Then, we will have an array of success rate.We use the average rank of the K initial states as the final metric for comparing submissions.
+              </p>
+              <p>
+                For Phase1, the participants run the evaluation script on their own computer and submit the log file to the challenge committee.
+              </p>
+              <p>
+                We reserve the right to use additional metrics to choose winners in case of statistically insignificant differences.
+              </p>
+            </div>
+            <div class="section" id="schedule">
+              <h2>Schedule</h2>
+              <ul>
+                <li>2023/12/31 Challenge release
+                </li>
+                <li>2024/03/30 Phase 1 Deadline
+                </li>
+                <li>2024/04/30 Phase 2 Deadline
+                </li>
+                <li>2024/05/13 Award ceremony
+                </li>
+              </ul>
+            </div>
+            <div class="section" id="organizers">
+                <h2>Organizers</h2>
+                <h3>Faculty</h3>
+                <div class="people">
+                  <a href="https://callmeray.github.io/homepage/">
+                    <img src="../assets/rui_chen.png">
+                    <div>Rui Chen</div>
+                    <div class="aff">Tsinghua University</div>
+                  </a>
+                  <a href="https://cseweb.ucsd.edu/~haosu/">
+                    <img src="../assets/haosu.jpeg">
+                    <div>Hao Su</div>
+                    <div class="aff">UC San Diego</div>
+                  </a>                  
+                  <a href="https://shanluo.github.io/">
+                    <img src="../assets/shan_luo.png">
+                    <div>Shan Luo</div>
+                    <div class="aff">King's College London</div>
+                  </a>
+                </div>
+                <h3>Student</h3>
+                <div class="people">
+                  <a href="">
+                    <img src="">
+                    <div>Weihang Chen</div>
+                    <div class="aff">Tsinghua University</div>
+                  </a>
+                  <a href="">
+                    <img src="">
+                    <div>Mai Zhang</div>
+                    <div class="aff">Tsinghua University</div>
+                  </a>
+                  <a href="">
+                    <img src="">
+                    <div>Chuanyu Li</div>
+                    <div class="aff">Sichuan University</div>
+                  </a>
+                  <a href="">
+                    <img src="">
+                    <div>Huizhong Cheng</div>
+                    <div class="aff">Tsinghua University</div>
+                  </a>
+                  <a href="">
+                    <img src="">
+                    <div>Xiaodi Yuan</div>
+                    <div class="aff">UC San Diego</div>
+                  </a>
+                  <a href="https://www.fbxiang.com">
+                    <img src="../assets/fanbo_xiang.jpg">
+                    <div>Fanbo Xiang</div>
+                    <div class="aff">UC San Diego</div>
+                  </a>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+          © ManiSkill-ViTac: Vision-based-Tactile Manipulation Skill Learning Challenge 2024
+        </div>
+    </body>
+</html>
