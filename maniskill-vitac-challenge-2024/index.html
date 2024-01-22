@@ -9,15 +9,16 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <title>RSS-GMPL2023</title>
+        <title>ManiSkill-ViTac Challenge 2024</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="nav">
             <div class="nav-container">
-                <a href="index.html#">Home</a>
+                <!-- <a href="index.html#">Home</a> -->
                 <a href="index.html#intro">Introduction</a>
-                <a href="index.html#format">Challenge Format</a>
+                <a href="index.html#start">Getting Started</a>
+                <a href="index.html#format">Format</a>
                 <a href="index.html#tasks">Tasks</a>
                 <a href="index.html#metrics">Metrics</a>
                 <a href="index.html#schedule">Schedule</a>
@@ -28,13 +29,6 @@
         <div class="title-container">
             <div style="text-align: center; margin: 20px">
                 <h1>ManiSkill-ViTac: Vision-based-Tactile Manipulation Skill Learning Challenge 2024</h1>
-                <!-- <div class="subtitle" style="color: #ccc; margin: 20px">
-                  <a href="https://roboticsconference.org/">RSS 2023</a> Workshop
-                </div>
-                <div class="subtitle" style="color: #ccc; margin: 20px">
-                  July 10, 2023   
-                </div>
-                <div class="subtitle" style="color: #ccc; margin: 20px">Daegu, Republic of Korea</div> -->
             </div>
         </div>
 
@@ -54,6 +48,13 @@
                 </p>
 
                 <p>
+                  <b>
+                  The award ceremony will be held at the 5th ViTac workshop in <a href="https://2024.ieee-icra.org/">ICRA 2024</a>.
+                  </b>
+                  
+                </p>
+
+                <p>
                   The ManiSkill-ViTac Challenge features:
                   <ul>
                     <li>An open-source general-purpose tactile sensor physics simulator</li>
@@ -63,7 +64,32 @@
                 </p>
 
             </div>
+            <div class="section" id="start">
+              <h2>Getting Started</h2>
+              <p>To get started submitting to the challenge, follow these steps:</p>
 
+            <p>1. Register a team to make submissions. Send an email to <a href="mailto:maniskill.vitac@gmail.com?subject=ManiSkill-ViTac Team Registration [Team Name]">maniskill.vitac@gmail.com</a>. We recommend using education emails for registration. Teams shall have no more than one leader and one instructor. The maximum number of additional team members is four.
+            </p>
+            <p>
+              Email format:
+              <pre>
+                Team Name: [Team Name]
+                Team Leader: [Name] [Institute] [Email]
+                (Optional) Instructor: [Name] [Institute] [Email]
+                Team Members:
+                1. [Name] [Institue] [Email (optional)]
+                2. [Name] [Institue] [Email (optional)]
+                3. [Name] [Institue] [Email (optional)]
+                4. [Name] [Institue] [Email (optional)]
+              </pre>
+            </p>
+            <p>
+              2. The codebase for this challenge is hosted on <a href="https://github.com/callmeray/ManiSkill-ViTac2024">GitHub</a>. This repository contains information about the competition environments, and the submission format.
+            </p>
+            <p>
+              3. Checkout the <a href="https://docs.google.com/spreadsheets/d/1ZCNSbctm5eyr4Q59KmVBE0ZMo5mt63emFLihbJn1maw/edit?usp=sharing">leaderboard</a> and make your own submission.
+            </p>
+            </div>
             <div class="section" id="format">
               <h2>Challenge Format</h2>
               <p>
@@ -78,8 +104,7 @@
               </div>
               <h3>Phase 2</h3>
               <p>
-              The top N participants’ algorithms will be evaluated on a physical robot. We use GelSight Mini, a commercially available vision-based tactile sensor, in our challenge.
-              In order to make the system easy to use and guarantee fair comparison, the codes uploaded by the participants will run in a docker container. The input and output of the real environment will be the same as the simulation. 
+              The top <i>N</i> participants’ algorithms will be evaluated on a physical robot. We use <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a>, a commercially available vision-based tactile sensor, in our challenge. The input and output format of the real environment will be the same as the simulation. 
               <div style="text-align: center;">
                 <img src="image5.png" alt=""  height="320">
                 </div>
@@ -91,7 +116,7 @@
             <div class="section" id="tasks">
               <h2>Tasks</h2>
               <p>
-                The challenge includes two tasks: plug insertion and lock opening. Similar to the  <a href="https://sapien.ucsd.edu/challenges/maniskill/">ManiSkill challenge</a>, we focus on evaluating the policy’s generalizability. Each task includes multiple objects of different shapes (e.g., the plug can be a cylinder or have two pins, and keys can have two or three teeth), which are unknown during evaluation. Therefore, the policy needs to be able to generalize to different plugs and keys.
+                The challenge includes two tasks: peg insertion and lock opening. Similar to the  <a href="https://sapien.ucsd.edu/challenges/maniskill/">ManiSkill challenge</a>, we focus on evaluating the policy’s generalizability. Each task includes multiple objects of different shapes (e.g., the peg can be a cuboid or a trapezoid, and keys can have two or three teeth), which are unknown during evaluation. Therefore, the policy needs to be able to generalize to different plugs and keys.
               </p>
               <div style="text-align: center;">
                 <img src="image4.gif" alt="Plug insertion"  height="200">
@@ -100,14 +125,21 @@
                 <figcaption>Lock opening</figcaption>
               </div>
             </div>
-
+            <div class="section" id="awards">
+            <h2>Awards</h2>
+            <ul>
+              <li>1st: 2 <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a></li>
+              <li>2nd: 1 <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a></li>
+              <li>3rd: 1 <a href="https://www.gelsight.com/products/#digittactilesensor">DIGIT Tactile Sensor</a></li>
+            </ul>
+            </div>
             <div class="section" id="metrics">
               <h2>Metrics</h2>
               <p>
-                Participating entries will be evaluated on K initial states. Each state will repeat T times. An episode is successful if the plug reaches the bottom of the socket and the lock is turned for a certain angle. For the real-world robot, a torque sensor is used. If at any point the torque on the gripper is larger than threshold, the task fails immediately. Then, we will have an array of success rate.We use the average rank of the K initial states as the final metric for comparing submissions.
+                Participating entries will be evaluated on <i>K</i> initial states. Each state will repeat <i>T</i> times. An episode is successful if the peg is in the hole and all the pins in the lock are lifted up. For the real-world robot, a torque sensor is used. If at any point the torque on the gripper is larger a than threshold, the task fails immediately. Then, we will have an array of success rate. We use the average rank of the <i>K</i> initial states as the final metric for comparing submissions.
               </p>
               <p>
-                For Phase1, the participants run the evaluation script on their own computer and submit the log file to the challenge committee.
+                For Phase1, the participants run the evaluation script on their own computer and submit the log files to the challenge committee.
               </p>
               <p>
                 We reserve the right to use additional metrics to choose winners in case of statistically insignificant differences.
@@ -116,13 +148,13 @@
             <div class="section" id="schedule">
               <h2>Schedule</h2>
               <ul>
-                <li>2023/12/31 Challenge release
+                <li>2024/01/31 Challenge release
                 </li>
-                <li>2024/03/30 Phase 1 Deadline
+                <li>2024/03/31 Phase 1 Deadline
                 </li>
                 <li>2024/04/30 Phase 2 Deadline
                 </li>
-                <li>2024/05/13 Award ceremony
+                <li>2024/05/13 Award Ceremony on the 5th ViTac workshop in <a href="https://2024.ieee-icra.org/">ICRA 2024</a>
                 </li>
               </ul>
             </div>
@@ -155,6 +187,11 @@
                     <div>Roberto Calandra</div>
                     <div class="aff">TU Dresden</div>
                   </a>
+                  <a href="https://www.me.tsinghua.edu.cn/en/info/1081/1202.htm">
+                    <img src="../assets/jing_xu.jpg">
+                    <div>Jing Xu</div>
+                    <div class="aff">Tsinghua University</div>
+                  </a>
                 </div>
                 <h3>Student</h3>
                 <div class="people">
@@ -164,28 +201,46 @@
                     <div class="aff">Tsinghua University</div>
                   </a>
                   <a href="">
-                    <img src="../assets/mai_zhang.jpg">
-                    <div>Mai Zhang</div>
+                    <img src="../assets/yuhao_liu.jpg">
+                    <div>YuHao Liu</div>
                     <div class="aff">Tsinghua University</div>
-                  </a>
-                  <a href="">
-                    <img src="../assets/chuanyu_li.jpg">
-                    <div>Chuanyu Li</div>
-                    <div class="aff">Sichuan University</div>
                   </a>
                   <a href="https://rabbit-hu.github.io/">
                     <img src="../assets/xiaodi_yuan.jpg">
                     <div>Xiaodi Yuan</div>
                     <div class="aff">UC San Diego</div>
                   </a>
+                  <a href="">
+                    <img src="../assets/chuanyu_li.jpg">
+                    <div>Chuanyu Li</div>
+                    <div class="aff">Sichuan University</div>
+                  </a>                  
                   <a href="https://www.fbxiang.com">
                     <img src="../assets/fanbo_xiang.jpg">
                     <div>Fanbo Xiang</div>
                     <div class="aff">UC San Diego</div>
                   </a>
+                  <a href="">
+                    <img src="../assets/mai_zhang.jpg">
+                    <div>Mai Zhang</div>
+                    <div class="aff">Tsinghua University</div>
+                  </a>
                 </div>
             </div>
+            <h2>Citation</h2>
+            <p>If you use our work in your research please cite the following</p>
+            <pre>@ARTICLE{chen2024tactilesim2real,
+              author={Chen, Weihang and Xu, Jing and Xiang, Fanbo and Yuan, Xiaodi and Su, Hao and Chen, Rui},
+              journal={IEEE Transactions on Robotics}, 
+              title={General-Purpose Sim2Real Protocol for Learning Contact-Rich Manipulation With Marker-Based Visuotactile Sensors}, 
+              year={2024},
+              volume={},
+              number={},
+              pages={1-18},
+              doi={10.1109/TRO.2024.3352969}}
+            </pre>
         </div>
+        
         <div class="foot">
           © ManiSkill-ViTac: Vision-based-Tactile Manipulation Skill Learning Challenge 2024
         </div>

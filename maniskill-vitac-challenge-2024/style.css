@@ -8,12 +8,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Roboto, sans-serif;
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 350;
+    font-size: 20px;
     line-height: 1.5;
     background-color: white;
     width: 100%;
     overflow-x: hidden;
+    text-align: justify;
 }
 
 a {
@@ -40,14 +41,28 @@ h1 {
 
 
 h2 {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 0.5em;
+    color: #084080;
+    font-weight: 500
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 2em;
     font-weight: 500;
     margin-bottom: 0.5em;
+}
+
+pre{
+    display:block;
+    font-family:monospace;
+    background-color:rgba(27,31,35,.05);
+    padding:10px;
+    overflow-x:auto;
+    word-break:normal;
+    white-space:pre;
+    max-width:70vw;
+    font-size: 0.7em;
 }
 
 .subtitle {
@@ -85,7 +100,7 @@ h3 {
 }
 
 .nav-container {
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin: auto;
     padding: 10px;
     display: flex;
