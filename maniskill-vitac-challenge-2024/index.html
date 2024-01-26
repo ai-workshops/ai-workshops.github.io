@@ -18,10 +18,10 @@
                 <!-- <a href="index.html#">Home</a> -->
                 <a href="index.html#intro">Introduction</a>
                 <a href="index.html#start">Getting Started</a>
-                <a href="index.html#format">Format</a>
                 <a href="index.html#tasks">Tasks</a>
-                <a href="index.html#awards">Awards</a>
+                <a href="index.html#format">Format</a>
                 <a href="index.html#metrics">Metrics</a>
+                <a href="index.html#awards">Awards</a>
                 <a href="index.html#schedule">Schedule</a>
                 <a href="index.html#organizers">Organizers</a>
             </div>
@@ -91,6 +91,18 @@
               3. Checkout the <a href="https://docs.google.com/spreadsheets/d/1ZCNSbctm5eyr4Q59KmVBE0ZMo5mt63emFLihbJn1maw/edit?usp=sharing">leaderboard</a> and make your own submission.
             </p>
             </div>
+            <div class="section" id="tasks">
+              <h2>Tasks</h2>
+              <p>
+                The challenge includes two tasks: peg insertion and lock opening. Similar to the  <a href="https://sapien.ucsd.edu/challenges/maniskill/">ManiSkill challenge</a>, we focus on evaluating the policy’s generalizability. Each task includes multiple objects of different shapes (e.g., the peg can be a cuboid or a trapezoid, and keys can have two or three teeth), which are unknown during evaluation. Therefore, the policy needs to be able to generalize to different plugs and keys.
+              </p>
+              <div style="text-align: center;">
+                <img src="peg-insertion-sim2real.gif" alt="Plug insertion"  width="600">
+                <figcaption>Peg insertion</figcaption>
+                <img src="lock-opening-sim2real.gif" alt="Lock opening"  width="600">
+                <figcaption>Lock opening</figcaption>
+              </div>
+            </div>
             <div class="section" id="format">
               <h2>Challenge Format</h2>
               <p>
@@ -98,42 +110,19 @@
               </p>
               <h3>Phase 1</h3>
               <p>
-              The simulation environments are built based on our developed tactile sensor simulator. The simulator uses FEM (Finite Element Method) for physics simulation and IPC (Incremental Potential Contact) as the contact model. Below is the demonstration of our simulator for the peg-in-hole task. We have verified the zero-shot Sim2Real performance of the simulator.
-              </p>
-              <div style="text-align: center;">
-              <img src="sim_real_align.gif" alt=""  width="569" height="320">
-              </div>
+              The simulation environments are built based on <a href="https://ieeexplore.ieee.org/abstract/document/10388459/">our developed tactile sensor simulator</a>, which uses FEM (Finite Element Method) for physics simulation and <a href="https://ipc-sim.github.io/">IPC (Incremental Potential Contact)</a> as the contact model. 
               <h3>Phase 2</h3>
               <p>
               The top <i>N</i> participants’ algorithms will be evaluated on a physical robot. We use <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a>, a commercially available vision-based tactile sensor, in our challenge. The input and output format of the real environment will be the same as the simulation. 
               <div style="text-align: center;">
-                <img src="image5.png" alt=""  height="320">
+                <img src="pen_in_hole.png" alt=""  height="400">
                 </div>
               </p>
               <p>
-              Each team will have three chances to upload the codes and evaluate. Full evaluation logs, including raw observations, groundtruth states, will be given to the participants, such that they can fine-tune their algorithms.
+              Each team will have 3 chances to upload the codes and evaluate. Full evaluation logs, including raw observations, groundtruth states, will be given to the participants, such that they can fine-tune their algorithms.
               </p>
             </div>
-            <div class="section" id="tasks">
-              <h2>Tasks</h2>
-              <p>
-                The challenge includes two tasks: peg insertion and lock opening. Similar to the  <a href="https://sapien.ucsd.edu/challenges/maniskill/">ManiSkill challenge</a>, we focus on evaluating the policy’s generalizability. Each task includes multiple objects of different shapes (e.g., the peg can be a cuboid or a trapezoid, and keys can have two or three teeth), which are unknown during evaluation. Therefore, the policy needs to be able to generalize to different plugs and keys.
-              </p>
-              <div style="text-align: center;">
-                <img src="image4.gif" alt="Plug insertion"  height="200">
-                <figcaption>Plug insertion</figcaption>
-                <img src="image3.gif" alt="Lock opening"  height="200">
-                <figcaption>Lock opening</figcaption>
-              </div>
-            </div>
-            <div class="section" id="awards">
-            <h2>Awards</h2>
-            <ul>
-              <li>1st: 2 <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a></li>
-              <li>2nd: 1 <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a></li>
-              <li>3rd: 1 <a href="https://www.gelsight.com/products/#digittactilesensor">DIGIT Tactile Sensor</a></li>
-            </ul>
-            </div>
+
             <div class="section" id="metrics">
               <h2>Metrics</h2>
               <p>
@@ -146,11 +135,20 @@
                 We reserve the right to use additional metrics to choose winners in case of statistically insignificant differences.
               </p>
             </div>
+            <div class="section" id="awards">
+              <h2>Awards</h2>
+              <ul>
+                <li>1st: 2 <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a></li>
+                <li>2nd: 1 <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a></li>
+                <li>3rd: 1 <a href="https://www.gelsight.com/products/#digittactilesensor">DIGIT Tactile Sensor</a></li>
+              </ul>
+              </div>
             <div class="section" id="schedule">
               <h2>Schedule</h2>
               <ul>
                 <li>2024/01/31 Challenge release
                 </li>
+                <li>2024/03/01 Phase 1 Start</li>
                 <li>2024/03/31 Phase 1 Deadline
                 </li>
                 <li>2024/04/30 Phase 2 Deadline
